@@ -8,12 +8,12 @@ before_install:
 script:
   - docker run afcarl/docker-react npm run test -- --coverage
 
-#deploy:
-#  provider: elasticbeanstalk
-#  region: "us-west-2"
-#  app: "docker-react"
-#  env: "DockerReact-env"
-#  bucket_name: "elasticbeanstalk-us-west-2-179989370246"
-#  bucket_path: "docker-react"
-#  on:
-#    branch: master
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-2"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-us-west-2-179989370246"
+  bucket_path: "docker-react"
+  on:
+    branch: master
